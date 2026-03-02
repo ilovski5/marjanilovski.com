@@ -1,17 +1,32 @@
 ---
-import "../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
-  </body>
-</html>
+<BaseLayout>
+  <!-- Hero placeholder -->
+  <section id="hero" class="mx-auto max-w-5xl px-6 py-32 text-center">
+    <p class="text-zinc-400 dark:text-zinc-500 text-sm font-mono">
+      Hero — coming next
+    </p>
+  </section>
+
+  <!-- Section divider -->
+  <hr class="border-t border-zinc-200 dark:border-zinc-800" />
+
+  <!-- Work placeholder -->
+  <section id="work" class="mx-auto max-w-5xl px-6 py-32 text-center">
+    <p class="text-zinc-400 dark:text-zinc-500 text-sm font-mono">
+      Work — coming next
+    </p>
+  </section>
+
+  <!-- Section divider -->
+  <hr class="border-t border-zinc-200 dark:border-zinc-800" />
+
+  <!-- Resume placeholder -->
+  <section id="resume" class="mx-auto max-w-5xl px-6 py-32 text-center">
+    <p class="text-zinc-400 dark:text-zinc-500 text-sm font-mono">
+      Resume — coming next
+    </p>
+  </section>
+</BaseLayout>
