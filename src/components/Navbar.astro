@@ -1,5 +1,6 @@
 ---
 // Navbar component — Cal.com-inspired minimal navigation
+import { Icon } from "astro-icon/components";
 ---
 
 <header
@@ -57,45 +58,23 @@
         class="flex items-center justify-center w-8 h-8 rounded-full border border-zinc-200 dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors text-zinc-700 dark:text-zinc-300"
       >
         <!-- Moon (shown in light mode) -->
-        <svg
+        <Icon
+          name="bi:moon-fill"
           id="icon-moon"
           class="block dark:hidden"
           width="14"
           height="14"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
           aria-hidden="true"
-        >
-          <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"></path>
-        </svg>
+        />
         <!-- Sun (shown in dark mode) -->
-        <svg
+        <Icon
+          name="bi:sun-fill"
           id="icon-sun"
           class="hidden dark:block"
           width="14"
           height="14"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
           aria-hidden="true"
-        >
-          <circle cx="12" cy="12" r="5"></circle>
-          <line x1="12" y1="1" x2="12" y2="3"></line>
-          <line x1="12" y1="21" x2="12" y2="23"></line>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-          <line x1="1" y1="12" x2="3" y2="12"></line>
-          <line x1="21" y1="12" x2="23" y2="12"></line>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-        </svg>
+        />
       </button>
     </nav>
 
@@ -106,42 +85,20 @@
         aria-label="Toggle dark/light mode"
         class="flex items-center justify-center w-8 h-8 rounded-full border border-zinc-200 dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors text-zinc-700 dark:text-zinc-300"
       >
-        <svg
+        <Icon
+          name="bi:moon-fill"
           class="block dark:hidden"
           width="14"
           height="14"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
           aria-hidden="true"
-        >
-          <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"></path>
-        </svg>
-        <svg
+        />
+        <Icon
+          name="bi:sun-fill"
           class="hidden dark:block"
           width="14"
           height="14"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
           aria-hidden="true"
-        >
-          <circle cx="12" cy="12" r="5"></circle>
-          <line x1="12" y1="1" x2="12" y2="3"></line>
-          <line x1="12" y1="21" x2="12" y2="23"></line>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-          <line x1="1" y1="12" x2="3" y2="12"></line>
-          <line x1="21" y1="12" x2="23" y2="12"></line>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-        </svg>
+        />
       </button>
 
       <button
@@ -150,36 +107,21 @@
         aria-expanded="false"
         class="flex items-center justify-center w-8 h-8 text-zinc-700 dark:text-zinc-300"
       >
-        <svg
+        <Icon
+          name="bi:list"
           id="hamburger-icon"
           width="18"
           height="18"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
           aria-hidden="true"
-        >
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-        <svg
+        />
+        <Icon
+          name="bi:x-lg"
           id="close-icon"
           class="hidden"
           width="18"
           height="18"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
           aria-hidden="true"
-        >
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
+        />
       </button>
     </div>
   </div>
