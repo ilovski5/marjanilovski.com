@@ -9,7 +9,7 @@ featured: true
 order: 2
 ---
 
-Winglex is a flight compensation platform that handles passenger claimsend-to-end — from submission to resolution, with full control over data, compliance, and infrastructure.
+Winglex is a flight compensation platform that handles passenger claims end-to-end — from submission to resolution, with full control over data, compliance, and infrastructure.
 
 ## The challenge
 
