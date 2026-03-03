@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
 import WorkSection from "../components/WorkSection.astro";
+import ResumeSection from "../components/ResumeSection.astro";
 ---
 
 <BaseLayout>
@@ -15,10 +16,5 @@ import WorkSection from "../components/WorkSection.astro";
   <!-- Section divider -->
   <hr class="border-t border-zinc-200 dark:border-zinc-800" />
 
-  <!-- Resume placeholder -->
-  <section id="resume" class="mx-auto max-w-5xl px-6 py-32 text-center">
-    <p class="text-zinc-400 dark:text-zinc-500 text-sm font-mono">
-      Resume — coming next
-    </p>
-  </section>
+  <ResumeSection />
 </BaseLayout>
