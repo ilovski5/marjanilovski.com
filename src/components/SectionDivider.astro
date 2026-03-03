@@ -1,0 +1,47 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<div
+  class="flex flex-row flex-none place-content-center items-center gap-2.5 w-full h-8 p-0 relative overflow-hidden"
+>
+  <div
+    class="bg-zinc-200 dark:bg-zinc-800 z-1 flex-none min-w-full h-px absolute top-[calc(50%-0.5px)] left-0 right-0 overflow-hidden"
+  >
+  </div>
+
+  <div
+    class="hidden lg:flex flex-row flex-[1_0_0] place-content-center items-center gap-0.5 w-px max-w-5xl h-7 p-0 relative overflow-visible"
+  >
+    <!-- icon left -->
+    <div
+      class="z-1 flex flex-row flex-none place-content-center items-center gap-2.5 w-min h-min p-0 relative overflow-hidden -ml-3"
+    >
+      <div class="w-6 h-6 bg-white dark:bg-zinc-950">
+        <Icon
+          name="bi:plus"
+          width="24"
+          height="24"
+          aria-hidden="true"
+          class="text-zinc-200 dark:text-zinc-800"
+        />
+      </div>
+    </div>
+    <!-- line -->
+    <div class="bg-white flex-[1_0_0] w-px h-px relative overflow-hidden"></div>
+    <!-- icon right -->
+    <div
+      class="z-1 flex flex-row flex-none place-content-center items-center gap-2.5 w-min h-min p-0 relative overflow-hidden -mr-3"
+    >
+      <div class="w-6 h-6 bg-white dark:bg-zinc-950">
+        <Icon
+          name="bi:plus"
+          width="24"
+          height="24"
+          aria-hidden="true"
+          class="text-zinc-200 dark:text-zinc-800"
+        />
+      </div>
+    </div>
+  </div>
+</div>

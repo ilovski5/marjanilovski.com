@@ -3,18 +3,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
 import WorkSection from "../components/WorkSection.astro";
 import ResumeSection from "../components/ResumeSection.astro";
+import SectionDivider from "../components/SectionDivider.astro";
 ---
 
 <BaseLayout>
   <Hero />
-
-  <!-- Section divider -->
-  <hr class="border-t border-zinc-200 dark:border-zinc-800" />
-
+  <SectionDivider />
   <WorkSection />
-
-  <!-- Section divider -->
-  <hr class="border-t border-zinc-200 dark:border-zinc-800" />
-
+  <SectionDivider />
   <ResumeSection />
 </BaseLayout>
