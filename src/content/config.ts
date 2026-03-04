@@ -6,6 +6,7 @@ const work = defineCollection({
     title: z.string(),
     subtitle: z.string().optional(),
     description: z.string(),
+    metaDescription: z.string().optional(),
     techStack: z.array(z.string()),
     icon: z.string().optional().default("💻"),
     iconSrc: z.string().optional(),

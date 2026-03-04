@@ -14,7 +14,7 @@ const projects = (await getCollection("work")).sort(
   <!-- Section header -->
   <div class="mb-12">
     <p
-      class="text-xs font-mono uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-3"
+      class="text-xs font-mono uppercase tracking-widest text-zinc-500 dark:text-zinc-400 mb-3"
     >
       Selected work
     </p>
@@ -30,7 +30,7 @@ const projects = (await getCollection("work")).sort(
     {
       projects.map((project) => (
         <ProjectCard
-          id={project.id}
+          id={project.id.replace(/\.md$/, "")}
           title={project.data.title}
           description={project.data.description}
           techStack={project.data.techStack}

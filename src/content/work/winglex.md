@@ -2,6 +2,7 @@
 title: Winglex
 subtitle: Flight compensation platform built for compliance and scale.
 description: A flight compensation platform handling passenger claims end-to-end. Built for compliance — secure document handling, automated PDF generation, and AWS infrastructure designed for PII.
+metaDescription: Secure flight compensation platform built with Next.js and AWS serverless architecture. Features automated PDF generation and compliant PII handling.
 techStack: ["Next.js", "TypeScript", "Tailwind CSS", "AWS", "PostgreSQL"]
 iconSrc: /winglex-icon.svg
 liveUrl: https://winglex.com
