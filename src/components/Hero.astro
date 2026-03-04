@@ -1,6 +1,8 @@
 ---
 // Hero section
+import { Picture } from "astro:assets";
 import { Icon } from "astro-icon/components";
+import avatarImage from "../assets/avatar.png";
 ---
 
 <section
@@ -8,23 +10,22 @@ import { Icon } from "astro-icon/components";
   class="mx-auto max-w-5xl px-6 pt-24 pb-28 flex flex-col items-center text-center"
 >
   <!-- Avatar -->
-  <div class="relative mb-7">
-    <div
-      class="w-30 h-30 rounded-full overflow-hidden ring-1 ring-zinc-200 dark:ring-zinc-700 shadow-md"
-    >
-      <img
-        src="/avatar.png"
-        alt="Marjan Ilovski"
-        width="120"
-        height="120"
-        class="w-full h-full object-cover"
-      />
-    </div>
+  <div class="mb-7">
+    <Picture
+      priority
+      quality="high"
+      src={avatarImage}
+      formats={["webp"]}
+      alt="Marjan Ilovski"
+      width={300}
+      height={300}
+      class="w-37.5 h-37.5 rounded-full bg-zinc-200 dark:bg-zinc-800 ring-1 ring-zinc-200 dark:ring-zinc-700"
+    />
   </div>
 
   <!-- Name -->
   <h1
-    class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 leading-tight mb-4"
+    class="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 leading-tight mb-4"
   >
     Hi, I'm Marjan Ilovski — a full-stack developer and consultant.
   </h1>
