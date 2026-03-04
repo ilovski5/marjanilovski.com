@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<BaseLayout title="404 — Page Not Found">
+  <div class="min-h-screen flex items-center justify-center px-6 -mt-16">
+    <div class="flex flex-col items-center text-center">
+      <p
+        class="text-9xl font-bold leading-none tracking-tighter text-zinc-900 dark:text-zinc-50 select-none"
+      >
+        404
+      </p>
+      <p class="text-2xl font-semibold text-zinc-900 dark:text-zinc-50 mb-3">
+        Page not found
+      </p>
+      <p class="text-base text-zinc-500 dark:text-zinc-400 mb-8 max-w-sm">
+        Looks like this page doesn't exist.
+      </p>
+      <a
+        href="/"
+        class="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+      >
+        <Icon name="bi:arrow-left" width="14" height="14" aria-hidden="true" />
+        Back home
+      </a>
+    </div>
+  </div>
+</BaseLayout>
