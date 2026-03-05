@@ -87,6 +87,7 @@ import { Icon } from "astro-icon/components";
       <button
         id="mobile-menu-toggle"
         aria-label="Open menu"
+        aria-controls="mobile-menu"
         aria-expanded="false"
         class="flex items-center justify-center w-8 h-8 text-zinc-700 dark:text-zinc-300"
       >
@@ -136,9 +137,18 @@ import { Icon } from "astro-icon/components";
 
 <script is:inline>
   // Theme toggle
+  function setThemePressedState(dark) {
+    const pressedValue = String(dark);
+    const btn = document.getElementById("theme-toggle");
+    const btnMobile = document.getElementById("theme-toggle-mobile");
+    if (btn) btn.setAttribute("aria-pressed", pressedValue);
+    if (btnMobile) btnMobile.setAttribute("aria-pressed", pressedValue);
+  }
+
   function applyTheme(dark) {
     document.documentElement.classList.toggle("dark", dark);
     localStorage.setItem("theme", dark ? "dark" : "light");
+    setThemePressedState(dark);
   }
 
   function toggleTheme() {
@@ -147,6 +157,8 @@ import { Icon } from "astro-icon/components";
 
   const btn = document.getElementById("theme-toggle");
   const btnMobile = document.getElementById("theme-toggle-mobile");
+  const isDark = document.documentElement.classList.contains("dark");
+  setThemePressedState(isDark);
   if (btn) btn.addEventListener("click", toggleTheme);
   if (btnMobile) btnMobile.addEventListener("click", toggleTheme);
 
@@ -164,6 +176,10 @@ import { Icon } from "astro-icon/components";
       if (hamburgerIcon) hamburgerIcon.classList.toggle("hidden", isOpen);
       if (closeIcon) closeIcon.classList.toggle("hidden", !isOpen);
       menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close menu" : "Open menu",
+      );
     });
 
     // Close menu when a link is clicked
@@ -174,6 +190,7 @@ import { Icon } from "astro-icon/components";
         if (hamburgerIcon) hamburgerIcon.classList.remove("hidden");
         if (closeIcon) closeIcon.classList.add("hidden");
         menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open menu");
       });
     });
   }
