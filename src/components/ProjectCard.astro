@@ -27,6 +27,7 @@ const { id, title, description, techStack, icon = "💻", iconSrc } = Astro.prop
           <img
             src={iconSrc}
             alt={title}
+            loading="lazy"
             width="24"
             height="24"
             class="w-6 h-6 object-contain"

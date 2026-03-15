@@ -135,9 +135,9 @@ import { Icon } from "astro-icon/components";
   </div>
 </header>
 
-<script is:inline>
+<script>
   // Theme toggle
-  function setThemePressedState(dark) {
+  function setThemePressedState(dark: boolean) {
     const pressedValue = String(dark);
     const btn = document.getElementById("theme-toggle");
     const btnMobile = document.getElementById("theme-toggle-mobile");
@@ -145,7 +145,7 @@ import { Icon } from "astro-icon/components";
     if (btnMobile) btnMobile.setAttribute("aria-pressed", pressedValue);
   }
 
-  function applyTheme(dark) {
+  function applyTheme(dark: boolean) {
     document.documentElement.classList.toggle("dark", dark);
     localStorage.setItem("theme", dark ? "dark" : "light");
     setThemePressedState(dark);
